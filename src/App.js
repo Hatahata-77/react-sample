@@ -41,10 +41,16 @@ const Home = () => {
 }
 
 const About = () => {
-  store.dispatch({type: 'MINUS'})
+  //store.dispatch({type: 'MINUS'})
+  store.dispatch({type: 'ADD'})
+  let x = store.getState().toString();
   return (
     <div>
       <h1>About</h1>
+      <p>投票数： {x}</p>
+      <p>
+        <Link to="/">Homeへ</Link>
+      </p>
     </div>
   )
 }
